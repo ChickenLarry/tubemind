@@ -1,0 +1,105 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>TubeMind Library</title>
+  <link rel="icon" href="../../icons/icon32.png">
+  <link rel="stylesheet" href="../ui/common.css">
+  <link rel="stylesheet" href="library.css">
+</head>
+<body>
+  <header class="lib-header">
+    <div class="lib-header-inner">
+      <div class="brand"><img src="../../icons/icon48.png" alt=""> <span>TubeMind</span> <span class="muted lib-sub" data-i18n="libraryTitle"></span></div>
+      <div class="lib-search">
+        <input class="input" id="q" type="search" data-i18n-placeholder="librarySearchPlaceholder" autocomplete="off">
+        <label class="row small muted lib-deep"><input type="checkbox" id="deep"> <span data-i18n="librarySearchTranscripts"></span></label>
+      </div>
+      <div class="row">
+        <button class="btn btn-sm" id="btn-export" data-i18n="libraryExport"></button>
+        <button class="icon-btn" id="btn-options" data-i18n-title="openOptions">⚙</button>
+      </div>
+    </div>
+    <nav class="lib-tabs" role="tablist">
+      <button class="tab" role="tab" data-tab="videos" data-i18n="libraryTabVideos"></button>
+      <button class="tab" role="tab" data-tab="notes" data-i18n="libraryTabNotes"></button>
+      <button class="tab" role="tab" data-tab="stats" data-i18n="libraryTabStats"></button>
+    </nav>
+  </header>
+
+  <div class="lib-layout">
+    <main class="lib-main">
+      <section class="lib-panel" id="panel-videos">
+        <div id="deep-results" class="deep-results" hidden></div>
+        <div id="videos-grid" class="videos-grid"></div>
+      </section>
+
+      <section class="lib-panel" id="panel-notes">
+        <div id="notes-all"></div>
+      </section>
+
+      <section class="lib-panel" id="panel-stats">
+        <div class="tiles" id="tiles"></div>
+        <div class="card chart-card">
+          <div class="row-between">
+            <h2 class="chart-title" data-i18n="statsChartTitle"></h2>
+            <span class="muted small" data-i18n="statsChartHint"></span>
+          </div>
+          <div class="chart" id="chart"></div>
+          <table class="sr-only" id="chart-table"></table>
+        </div>
+        <div class="card chart-card">
+          <h2 class="chart-title" data-i18n="statsTopChannels"></h2>
+          <div id="channels" class="channels"></div>
+        </div>
+      </section>
+    </main>
+
+    <aside class="lib-aside">
+      <div id="sponsor"></div>
+      <div class="card aside-card">
+        <div class="aside-title" data-i18n="shortcutsTitle"></div>
+        <ul class="keys">
+          <li><kbd>S</kbd> <span data-i18n="onboardingSearch"></span></li>
+          <li><kbd>N</kbd> <span data-i18n="onboardingNote"></span></li>
+          <li><kbd>B</kbd> <span data-i18n="onboardingBookmark"></span></li>
+          <li><kbd>A</kbd> <kbd>D</kbd> <span data-i18n="onboardingSpeed"></span></li>
+          <li><kbd>R</kbd> <span data-i18n="shortcutResetSpeed"></span></li>
+        </ul>
+      </div>
+      <a class="card aside-card aside-link" id="donate" target="_blank" rel="noopener" hidden>
+        <div class="aside-title">❤️ <span data-i18n="supportProject"></span></div>
+        <div class="small muted" data-i18n="supportText"></div>
+      </a>
+    </aside>
+  </div>
+
+  <dialog id="detail" class="detail">
+    <div class="detail-head">
+      <img id="d-thumb" class="detail-thumb" alt="">
+      <div class="grow">
+        <h2 id="d-title"></h2>
+        <div class="muted small" id="d-channel"></div>
+        <div class="row detail-actions">
+          <a class="btn btn-sm btn-primary" id="d-open" target="_blank" rel="noopener" data-i18n="openOnYouTube"></a>
+          <button class="btn btn-sm" id="d-export" data-i18n="downloadMarkdown"></button>
+          <button class="btn btn-sm btn-ghost btn-danger" id="d-delete" data-i18n="libraryRemove"></button>
+        </div>
+      </div>
+      <button class="icon-btn" id="d-close" data-i18n-title="close">✕</button>
+    </div>
+    <div class="detail-body" id="d-body"></div>
+  </dialog>
+
+  <script src="../shared/config.js"></script>
+  <script src="../shared/utils.js"></script>
+  <script src="../shared/settings.js"></script>
+  <script src="../shared/store.js"></script>
+  <script src="../shared/textsearch.js"></script>
+  <script src="../shared/export.js"></script>
+  <script src="../ui/page.js"></script>
+  <script src="../ui/sponsor.js"></script>
+  <script src="library.js"></script>
+</body>
+</html>

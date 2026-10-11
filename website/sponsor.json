@@ -1,0 +1,19 @@
+{
+  "version": 1,
+  "items": [
+    {
+      "id": "example-sponsor",
+      "active": false,
+      "title": { "en": "Your product here", "de": "Dein Produkt hier", "fr": "Ton produit ici", "it": "Il tuo prodotto qui" },
+      "text": { "en": "Reach people who learn on YouTube.", "de": "Erreiche Menschen, die auf YouTube lernen.", "fr": "Touche les personnes qui apprennent sur YouTube.", "it": "Raggiungi chi impara su YouTube." },
+      "cta": { "en": "Learn more", "de": "Mehr erfahren", "fr": "En savoir plus", "it": "Scopri di più" },
+      "url": "https://example.com/?ref=tubemind",
+      "image": "",
+      "placements": ["popup", "sidepanel", "library"],
+      "locales": ["*"],
+      "weight": 1,
+      "start": "2026-01-01",
+      "end": "2027-12-31"
+    }
+  ]
+}

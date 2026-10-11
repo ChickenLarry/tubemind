@@ -1,0 +1,72 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>TubeMind</title>
+  <link rel="stylesheet" href="../ui/common.css">
+  <link rel="stylesheet" href="popup.css">
+</head>
+<body>
+  <header class="row-between pp-header">
+    <div class="brand"><img src="../../icons/icon48.png" alt=""> TubeMind</div>
+    <button class="icon-btn" id="btn-options" data-i18n-title="openOptions">⚙</button>
+  </header>
+
+  <section class="pp-section" id="focus-section">
+    <div class="row-between">
+      <div>
+        <div class="pp-title">🧘 <span data-i18n="focusMode"></span></div>
+        <div class="small muted" data-i18n="focusModeDesc"></div>
+      </div>
+      <label class="switch"><input type="checkbox" id="focus-enabled"><span></span></label>
+    </div>
+    <div class="pp-sub" id="focus-options">
+      <label class="pp-check"><span data-i18n="optHideShorts"></span><span class="switch switch-sm"><input type="checkbox" data-focus="hideShorts"><span></span></span></label>
+      <label class="pp-check"><span data-i18n="optHideHomeFeed"></span><span class="switch switch-sm"><input type="checkbox" data-focus="hideHomeFeed"><span></span></span></label>
+      <label class="pp-check"><span data-i18n="optHideRelated"></span><span class="switch switch-sm"><input type="checkbox" data-focus="hideRelated"><span></span></span></label>
+      <label class="pp-check"><span data-i18n="optHideComments"></span><span class="switch switch-sm"><input type="checkbox" data-focus="hideComments"><span></span></span></label>
+    </div>
+  </section>
+
+  <section class="pp-section" id="today-section">
+    <div class="pp-title" data-i18n="todayTitle"></div>
+    <div class="row pp-stat">
+      <span class="pp-big" id="today-total">0 min</span>
+      <span class="muted small" id="today-shorts"></span>
+    </div>
+    <div class="bar" id="limit-bar" hidden><div class="bar-fill" id="limit-fill"></div></div>
+    <div class="small muted" id="limit-text"></div>
+  </section>
+
+  <section class="pp-actions">
+    <button class="btn btn-primary" id="btn-panel">⧉ <span data-i18n="openSidePanel"></span></button>
+    <button class="btn" id="btn-library">📚 <span data-i18n="openLibrary"></span></button>
+  </section>
+
+  <section class="pp-rate card" id="rate" hidden>
+    <div class="pp-title">⭐ <span data-i18n="rateTitle"></span></div>
+    <div class="small muted" data-i18n="rateText"></div>
+    <div class="row">
+      <a class="btn btn-sm btn-primary" id="btn-rate" target="_blank" rel="noopener" data-i18n="rateButton"></a>
+      <button class="btn btn-sm btn-ghost" id="btn-rate-later" data-i18n="rateLater"></button>
+    </div>
+  </section>
+
+  <div id="sponsor" class="pp-sponsor"></div>
+
+  <footer class="row-between small pp-footer">
+    <a id="link-donate" target="_blank" rel="noopener" hidden>❤️ <span data-i18n="supportProject"></span></a>
+    <a id="link-privacy" target="_blank" rel="noopener" data-i18n="privacy" hidden></a>
+    <span class="muted" id="version"></span>
+  </footer>
+
+  <script src="../shared/config.js"></script>
+  <script src="../shared/utils.js"></script>
+  <script src="../shared/settings.js"></script>
+  <script src="../shared/store.js"></script>
+  <script src="../ui/page.js"></script>
+  <script src="../ui/sponsor.js"></script>
+  <script src="popup.js"></script>
+</body>
+</html>

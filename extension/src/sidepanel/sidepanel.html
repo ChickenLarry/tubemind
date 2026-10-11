@@ -1,0 +1,139 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>TubeMind</title>
+  <link rel="stylesheet" href="../ui/common.css">
+  <link rel="stylesheet" href="sidepanel.css">
+</head>
+<body>
+  <header class="sp-header">
+    <div class="brand"><img src="../../icons/icon48.png" alt=""> TubeMind</div>
+    <div class="row">
+      <button class="icon-btn" id="btn-library" data-i18n-title="openLibrary">📚</button>
+      <button class="icon-btn" id="btn-options" data-i18n-title="openOptions">⚙</button>
+    </div>
+  </header>
+
+  <!-- Not on a YouTube video -->
+  <section id="view-empty" class="empty sp-state" hidden>
+    <div class="empty-icon">▶️</div>
+    <p data-i18n="panelOpenVideo"></p>
+    <p class="small" data-i18n="panelOpenVideoHint"></p>
+  </section>
+
+  <!-- Content script missing (tab opened before install/update) -->
+  <section id="view-reload" class="empty sp-state" hidden>
+    <div class="empty-icon">🔄</div>
+    <p data-i18n="panelReload"></p>
+    <button class="btn btn-primary" id="btn-reload" data-i18n="panelReloadButton"></button>
+  </section>
+
+  <main id="view-video" hidden>
+    <div class="sp-video">
+      <img class="sp-thumb" id="v-thumb" alt="">
+      <div class="grow">
+        <div class="sp-title" id="v-title"></div>
+        <div class="muted small ellipsis" id="v-channel"></div>
+      </div>
+    </div>
+
+    <nav class="tabs" role="tablist">
+      <button role="tab" class="tab" data-tab="summary" id="tabbtn-summary"><span data-i18n="tabSummary"></span></button>
+      <button role="tab" class="tab" data-tab="transcript" id="tabbtn-transcript"><span data-i18n="tabTranscript"></span></button>
+      <button role="tab" class="tab" data-tab="notes" id="tabbtn-notes"><span data-i18n="tabNotes"></span> <span class="tab-count" id="notes-count"></span></button>
+    </nav>
+
+    <!-- ===== Summary ===== -->
+    <section class="tab-panel" id="tab-summary" role="tabpanel">
+      <div class="ai-status small" id="ai-status"></div>
+      <div id="sum-start" class="sum-start">
+        <button class="btn btn-primary btn-block" id="btn-summarize">✨ <span data-i18n="summarizeButton"></span></button>
+        <p class="muted small center" id="sum-start-hint"></p>
+      </div>
+      <div id="sum-progress" class="sum-progress" hidden>
+        <div class="row"><span class="spinner"></span><span id="sum-progress-text"></span></div>
+        <div class="bar"><div class="bar-fill" id="sum-progress-bar"></div></div>
+      </div>
+      <div id="sum-error" class="notice" hidden></div>
+      <div id="sum-result" class="sum-result" hidden>
+        <div class="sum-block" id="sum-tldr-block">
+          <h3 data-i18n="summaryTldr"></h3>
+          <p id="sum-tldr"></p>
+        </div>
+        <div class="sum-block" id="sum-points-block">
+          <h3 data-i18n="summaryKeyPoints"></h3>
+          <div id="sum-points" class="md"></div>
+        </div>
+        <div class="sum-block" id="sum-moments-block">
+          <h3 data-i18n="summaryMoments"></h3>
+          <ol id="sum-moments" class="timeline"></ol>
+        </div>
+        <div class="sum-block" id="sum-timeline-block">
+          <h3 data-i18n="summaryTimeline"></h3>
+          <ol id="sum-timeline" class="timeline"></ol>
+        </div>
+        <div class="sum-block" id="sum-keywords-block">
+          <h3 data-i18n="summaryKeywords"></h3>
+          <div id="sum-keywords" class="chips"></div>
+        </div>
+        <div class="row sum-actions">
+          <button class="btn btn-sm" id="btn-sum-copy" data-i18n="copyMarkdown"></button>
+          <button class="btn btn-sm btn-ghost" id="btn-sum-redo" data-i18n="summaryRedo"></button>
+        </div>
+        <p class="muted small" id="sum-engine"></p>
+      </div>
+    </section>
+
+    <!-- ===== Transcript ===== -->
+    <section class="tab-panel" id="tab-transcript" role="tabpanel">
+      <div class="tr-toolbar">
+        <input class="input" id="tr-search" type="search" data-i18n-placeholder="transcriptSearchPlaceholder" autocomplete="off" spellcheck="false">
+        <div class="row-between">
+          <span class="muted small" id="tr-count"></span>
+          <div class="row">
+            <select class="input input-sm" id="tr-lang" hidden></select>
+            <button class="icon-btn" id="btn-tr-copy" data-i18n-title="transcriptCopy">⧉</button>
+            <button class="icon-btn" id="btn-tr-download" data-i18n-title="transcriptDownload">⬇</button>
+          </div>
+        </div>
+      </div>
+      <div id="tr-status" class="empty" hidden></div>
+      <div id="tr-list" class="tr-list"></div>
+    </section>
+
+    <!-- ===== Notes ===== -->
+    <section class="tab-panel" id="tab-notes" role="tabpanel">
+      <div class="note-add card">
+        <label class="small muted" for="note-input" id="note-add-label"></label>
+        <textarea class="input" id="note-input" rows="2" data-i18n-placeholder="notePlaceholder"></textarea>
+        <div class="row-between">
+          <button class="btn btn-sm btn-ghost" id="btn-bookmark">🔖 <span data-i18n="bookmarkButton"></span></button>
+          <button class="btn btn-sm btn-primary" id="btn-note-add" data-i18n="noteAddButton"></button>
+        </div>
+      </div>
+      <div id="notes-list" class="notes-list"></div>
+      <div class="row notes-export" id="notes-export">
+        <button class="btn btn-sm" id="btn-notes-copy" data-i18n="copyMarkdown"></button>
+        <button class="btn btn-sm btn-ghost" id="btn-notes-download" data-i18n="downloadMarkdown"></button>
+      </div>
+    </section>
+  </main>
+
+  <footer class="sp-footer">
+    <div id="sponsor"></div>
+  </footer>
+
+  <script src="../shared/config.js"></script>
+  <script src="../shared/utils.js"></script>
+  <script src="../shared/settings.js"></script>
+  <script src="../shared/store.js"></script>
+  <script src="../shared/textsearch.js"></script>
+  <script src="../shared/export.js"></script>
+  <script src="../ui/page.js"></script>
+  <script src="../ui/sponsor.js"></script>
+  <script src="summary.js"></script>
+  <script src="sidepanel.js"></script>
+</body>
+</html>

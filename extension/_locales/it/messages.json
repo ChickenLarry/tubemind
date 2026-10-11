@@ -1,0 +1,584 @@
+{
+  "extName": {
+    "message": "TubeMind: riassunto IA, ricerca nella trascrizione e note YouTube"
+  },
+  "extDescription": {
+    "message": "Cerca nei video YouTube, ottieni riassunti IA gratuiti sul tuo dispositivo, prendi note con timestamp. Privato."
+  },
+  "cancel": {
+    "message": "Annulla"
+  },
+  "close": {
+    "message": "Chiudi"
+  },
+  "save": {
+    "message": "Salva"
+  },
+  "saved": {
+    "message": "Salvato"
+  },
+  "delete": {
+    "message": "Elimina"
+  },
+  "deleteConfirm": {
+    "message": "Clicca di nuovo per eliminare"
+  },
+  "copied": {
+    "message": "Copiato"
+  },
+  "copyLink": {
+    "message": "Copia il link a questo momento"
+  },
+  "copyMarkdown": {
+    "message": "Copia come Markdown"
+  },
+  "downloadMarkdown": {
+    "message": "Scarica (.md)"
+  },
+  "errorGeneric": {
+    "message": "Qualcosa è andato storto. Riprova."
+  },
+  "openLibrary": {
+    "message": "Libreria"
+  },
+  "openOptions": {
+    "message": "Impostazioni"
+  },
+  "openSidePanel": {
+    "message": "Pannello laterale"
+  },
+  "openOnYouTube": {
+    "message": "Apri su YouTube"
+  },
+  "privacy": {
+    "message": "Privacy"
+  },
+  "website": {
+    "message": "Sito web"
+  },
+  "supportProject": {
+    "message": "Sostieni"
+  },
+  "supportText": {
+    "message": "TubeMind è e resterà gratuito. Una piccola donazione aiuta lo sviluppo."
+  },
+  "sidePanelHint": {
+    "message": "Clicca sull'icona di TubeMind nella barra degli strumenti per aprire il pannello laterale."
+  },
+  "exportFooter": {
+    "message": "Esportato con TubeMind – cerca, riassumi e prendi appunti su YouTube"
+  },
+  "searchPlaceholder": {
+    "message": "Cerca nel video…"
+  },
+  "searchButtonTitle": {
+    "message": "Cerca nel video (S)"
+  },
+  "searchLoading": {
+    "message": "Caricamento della trascrizione…"
+  },
+  "searchNext": {
+    "message": "Risultato successivo (Invio)"
+  },
+  "searchPrev": {
+    "message": "Risultato precedente (Maiusc+Invio)"
+  },
+  "searchNoHits": {
+    "message": "Nessun risultato"
+  },
+  "searchNoTranscript": {
+    "message": "Nessuna trascrizione disponibile per questo video."
+  },
+  "noteAddTitle": {
+    "message": "Nota al momento attuale (N)"
+  },
+  "noteAt": {
+    "message": "Nota a $1"
+  },
+  "noteAddAt": {
+    "message": "Nuova nota a $1"
+  },
+  "noteHint": {
+    "message": "Invio = salva · Esc = annulla"
+  },
+  "notePlaceholder": {
+    "message": "Cosa è importante qui?"
+  },
+  "noteSaved": {
+    "message": "Nota salvata a $1"
+  },
+  "bookmarkSaved": {
+    "message": "Segnalibro salvato a $1"
+  },
+  "bookmarkButton": {
+    "message": "Segnalibro"
+  },
+  "bookmarkLabel": {
+    "message": "Segnalibro"
+  },
+  "noteAddButton": {
+    "message": "Aggiungi"
+  },
+  "noteEditHint": {
+    "message": "Clicca per modificare"
+  },
+  "notesCount": {
+    "message": "$1 note"
+  },
+  "notesEmpty": {
+    "message": "Ancora nessuna nota per questo video. Premi N nel player o scrivine una qui sopra."
+  },
+  "onboardingTitle": {
+    "message": "TubeMind è pronto"
+  },
+  "onboardingSearch": {
+    "message": "cerca nel video"
+  },
+  "onboardingNote": {
+    "message": "nota"
+  },
+  "onboardingBookmark": {
+    "message": "segnalibro"
+  },
+  "onboardingSpeed": {
+    "message": "velocità"
+  },
+  "onboardingOk": {
+    "message": "Capito"
+  },
+  "shortcutsTitle": {
+    "message": "Scorciatoie da tastiera su YouTube"
+  },
+  "shortcutFaster": {
+    "message": "più veloce"
+  },
+  "shortcutSlower": {
+    "message": "più lento"
+  },
+  "shortcutResetSpeed": {
+    "message": "velocità normale"
+  },
+  "focusMode": {
+    "message": "Modalità concentrazione"
+  },
+  "focusModeDesc": {
+    "message": "Nascondi le distrazioni su YouTube"
+  },
+  "focusHomeTitle": {
+    "message": "La modalità concentrazione è attiva"
+  },
+  "focusHomeText": {
+    "message": "I consigli sono nascosti. Cerca ciò che vuoi davvero guardare."
+  },
+  "focusHomeShowAnyway": {
+    "message": "Mostra comunque i consigli"
+  },
+  "limitTitle": {
+    "message": "Budget giornaliero raggiunto"
+  },
+  "limitText": {
+    "message": "Oggi hai guardato $1 di YouTube. Il tuo budget giornaliero è $2."
+  },
+  "limitBreak": {
+    "message": "Fai una pausa"
+  },
+  "limitSnooze": {
+    "message": "Altri 10 minuti"
+  },
+  "limitDismiss": {
+    "message": "Non chiedere più oggi"
+  },
+  "tabSummary": {
+    "message": "Riassunto"
+  },
+  "tabTranscript": {
+    "message": "Trascrizione"
+  },
+  "tabNotes": {
+    "message": "Note"
+  },
+  "panelOpenVideo": {
+    "message": "Apri un video YouTube"
+  },
+  "panelOpenVideoHint": {
+    "message": "TubeMind mostrerà qui il riassunto, la trascrizione ricercabile e le tue note."
+  },
+  "panelReload": {
+    "message": "Ricarica una volta la scheda di YouTube così TubeMind può connettersi."
+  },
+  "panelReloadButton": {
+    "message": "Ricarica scheda"
+  },
+  "aiAvailable": {
+    "message": "L'IA sul tuo dispositivo è pronta"
+  },
+  "aiDownloadable": {
+    "message": "IA locale disponibile (download una tantum)"
+  },
+  "aiDownloading": {
+    "message": "Download del modello IA… $1%"
+  },
+  "aiUnavailable": {
+    "message": "Modalità base – il tuo browser non ha un'IA integrata"
+  },
+  "summarizeButton": {
+    "message": "Riassumi il video"
+  },
+  "summarizeHintAI": {
+    "message": "Funziona in privato sul tuo dispositivo – gratis e senza account."
+  },
+  "summarizeHintDownload": {
+    "message": "La prima volta Chrome scarica il suo modello IA una sola volta (alcuni minuti). Dopo è immediato."
+  },
+  "summarizeHintBasic": {
+    "message": "Mostra i momenti e gli argomenti più importanti. Per veri riassunti IA serve un Chrome aggiornato su un computer con memoria sufficiente."
+  },
+  "summaryProgress": {
+    "message": "Riassunto in corso… passo $1 di $2"
+  },
+  "summaryTldr": {
+    "message": "In breve"
+  },
+  "summaryKeyPoints": {
+    "message": "Punti chiave"
+  },
+  "summaryMoments": {
+    "message": "Momenti chiave"
+  },
+  "summaryTimeline": {
+    "message": "Cronologia"
+  },
+  "summaryKeywords": {
+    "message": "Argomenti – clicca per cercare"
+  },
+  "summaryRedo": {
+    "message": "Rigenera"
+  },
+  "summaryEngineAI": {
+    "message": "Creato con l'IA del tuo dispositivo."
+  },
+  "summaryEngineBasic": {
+    "message": "Riassunto base: i momenti più significativi della trascrizione."
+  },
+  "summaryAiFailed": {
+    "message": "(IA non disponibile, usata la modalità base)"
+  },
+  "noTranscript": {
+    "message": "Questo video non ha trascrizione né sottotitoli."
+  },
+  "transcriptLoading": {
+    "message": "Caricamento della trascrizione…"
+  },
+  "transcriptSearchPlaceholder": {
+    "message": "Cerca nella trascrizione…"
+  },
+  "transcriptCopy": {
+    "message": "Copia trascrizione"
+  },
+  "transcriptDownload": {
+    "message": "Scarica trascrizione (.txt)"
+  },
+  "hitsCount": {
+    "message": "$1 risultati"
+  },
+  "segmentsCount": {
+    "message": "$1 righe"
+  },
+  "sponsorLabel": {
+    "message": "Sponsorizzato"
+  },
+  "houseDonateTitle": {
+    "message": "Sostieni TubeMind"
+  },
+  "houseDonateText": {
+    "message": "TubeMind è gratuito. Un piccolo contributo lo mantiene tale."
+  },
+  "houseDonateCta": {
+    "message": "Dona"
+  },
+  "houseRateTitle": {
+    "message": "Ti piace TubeMind?"
+  },
+  "houseRateText": {
+    "message": "Una recensione a 5 stelle aiuta altri a trovare TubeMind."
+  },
+  "houseRateCta": {
+    "message": "Valuta"
+  },
+  "todayTitle": {
+    "message": "Guardato oggi su YouTube"
+  },
+  "todayShorts": {
+    "message": "di cui $1 di Shorts"
+  },
+  "todayLimit": {
+    "message": "Budget giornaliero: $1"
+  },
+  "rateTitle": {
+    "message": "Ti piace TubeMind?"
+  },
+  "rateText": {
+    "message": "Una breve recensione richiede 10 secondi e aiuta moltissimo."
+  },
+  "rateButton": {
+    "message": "Valuta TubeMind"
+  },
+  "rateLater": {
+    "message": "Più tardi"
+  },
+  "libraryTitle": {
+    "message": "Libreria"
+  },
+  "libraryTabVideos": {
+    "message": "Video"
+  },
+  "libraryTabNotes": {
+    "message": "Note"
+  },
+  "libraryTabStats": {
+    "message": "Statistiche"
+  },
+  "librarySearchPlaceholder": {
+    "message": "Cerca titoli, note e riassunti…"
+  },
+  "librarySearchTranscripts": {
+    "message": "Cerca anche nelle trascrizioni"
+  },
+  "libraryExport": {
+    "message": "Esporta (.md)"
+  },
+  "libraryEmpty": {
+    "message": "La tua libreria è vuota. Su YouTube premi N per prendere una nota o fai riassumere un video – apparirà qui."
+  },
+  "libraryNotesEmpty": {
+    "message": "Ancora nessuna nota. Premi N durante un video."
+  },
+  "libraryNoResults": {
+    "message": "Nessun risultato."
+  },
+  "libraryRemove": {
+    "message": "Rimuovi dalla libreria"
+  },
+  "deepResults": {
+    "message": "$1 video con risultati nella trascrizione"
+  },
+  "statsToday": {
+    "message": "Oggi"
+  },
+  "statsWeek": {
+    "message": "Ultimi 7 giorni"
+  },
+  "statsAverage": {
+    "message": "Media giornaliera (7 giorni)"
+  },
+  "statsShortsShare": {
+    "message": "Quota Shorts (7 giorni)"
+  },
+  "statsChartTitle": {
+    "message": "Tempo di visione, ultimi 14 giorni"
+  },
+  "statsChartHint": {
+    "message": "Passa sopra un giorno per i dettagli"
+  },
+  "statsTopChannels": {
+    "message": "Canali più visti (7 giorni)"
+  },
+  "statsWatched": {
+    "message": "Guardato"
+  },
+  "statsDate": {
+    "message": "Data"
+  },
+  "statsNoData": {
+    "message": "Ancora nessun dato – guarda un video e torna qui."
+  },
+  "optionsTitle": {
+    "message": "Impostazioni"
+  },
+  "optModulesTitle": {
+    "message": "Funzioni"
+  },
+  "optModulesDesc": {
+    "message": "Disattiva ciò che non ti serve. Tutto è gratuito."
+  },
+  "modSearch": {
+    "message": "Ricerca video & trascrizione"
+  },
+  "modSearchDesc": {
+    "message": "Cerca nei video – ogni risultato appare sulla barra di avanzamento."
+  },
+  "modSummary": {
+    "message": "Riassunti"
+  },
+  "modSummaryDesc": {
+    "message": "Riassunti gratuiti con l'IA integrata in Chrome – nulla lascia il tuo dispositivo."
+  },
+  "modNotes": {
+    "message": "Note con timestamp"
+  },
+  "modNotesDesc": {
+    "message": "Note e segnalibri come marcatori nel video, più la tua libreria."
+  },
+  "modFocus": {
+    "message": "Modalità concentrazione"
+  },
+  "modFocusDesc": {
+    "message": "Nascondi Shorts, consigli, commenti e schermate finali."
+  },
+  "modPlayer": {
+    "message": "Comfort del player"
+  },
+  "modPlayerDesc": {
+    "message": "Velocità per canale, fino a 16×, modalità cinema, qualità."
+  },
+  "modStats": {
+    "message": "Tempo di visione & budget giornaliero"
+  },
+  "modStatsDesc": {
+    "message": "Guarda quanto tempo passi – salvato solo su questo dispositivo."
+  },
+  "optFocusEnabled": {
+    "message": "Modalità concentrazione attiva"
+  },
+  "optHideShorts": {
+    "message": "Nascondi Shorts"
+  },
+  "optHideHomeFeed": {
+    "message": "Nascondi il feed della home"
+  },
+  "optHideRelated": {
+    "message": "Nascondi consigli accanto ai video"
+  },
+  "optHideComments": {
+    "message": "Nascondi commenti"
+  },
+  "optHideEndscreen": {
+    "message": "Nascondi schermate finali"
+  },
+  "optRedirectShorts": {
+    "message": "Apri gli Shorts nel player normale"
+  },
+  "optRedirectShortsHelp": {
+    "message": "Niente scorrimento infinito – con barra di avanzamento e tutte le funzioni TubeMind."
+  },
+  "optSearchNotesTitle": {
+    "message": "Ricerca, note & riassunti"
+  },
+  "optSearchMarkers": {
+    "message": "Mostra i risultati sulla barra di avanzamento"
+  },
+  "optNoteMarkers": {
+    "message": "Mostra le note come marcatori sulla barra di avanzamento"
+  },
+  "optPauseOnNote": {
+    "message": "Metti in pausa il video mentre scrivi una nota"
+  },
+  "optSummaryLength": {
+    "message": "Lunghezza dei punti chiave"
+  },
+  "lengthShort": {
+    "message": "Breve"
+  },
+  "lengthMedium": {
+    "message": "Medio"
+  },
+  "lengthLong": {
+    "message": "Lungo"
+  },
+  "optChannelSpeed": {
+    "message": "Ricorda la velocità per canale"
+  },
+  "optChannelSpeedHelp": {
+    "message": "Es. podcast a 1,5×, tutorial a 1×."
+  },
+  "optSpeedKeys": {
+    "message": "Tasti velocità (A / D / R)"
+  },
+  "optSpeedKeysHelp": {
+    "message": "A = più lento, D = più veloce, R = velocità normale"
+  },
+  "optSpeedStep": {
+    "message": "Passo di velocità"
+  },
+  "optMaxSpeed": {
+    "message": "Velocità massima"
+  },
+  "optAutoTheater": {
+    "message": "Apri sempre i video in modalità cinema"
+  },
+  "optQuality": {
+    "message": "Qualità preferita"
+  },
+  "qualityAuto": {
+    "message": "Automatica"
+  },
+  "optTimeTitle": {
+    "message": "Tempo di visione"
+  },
+  "optDailyLimit": {
+    "message": "Budget giornaliero (minuti)"
+  },
+  "optDailyLimitHelp": {
+    "message": "0 = disattivato. Al raggiungimento, TubeMind suggerisce una pausa."
+  },
+  "dataTitle": {
+    "message": "I tuoi dati"
+  },
+  "dataText": {
+    "message": "Tutte le note, i riassunti e le statistiche sono salvati solo su questo dispositivo. Nulla viene caricato."
+  },
+  "dataExport": {
+    "message": "Esporta backup (.json)"
+  },
+  "dataImport": {
+    "message": "Importa backup"
+  },
+  "dataImported": {
+    "message": "Backup importato"
+  },
+  "dataImportError": {
+    "message": "Questo file non è un backup TubeMind valido"
+  },
+  "dataClear": {
+    "message": "Elimina tutti i dati"
+  },
+  "dataClearConfirm": {
+    "message": "Eliminare davvero tutto? Clicca di nuovo"
+  },
+  "dataCleared": {
+    "message": "Tutti i dati sono stati eliminati"
+  },
+  "aboutTitle": {
+    "message": "Informazioni"
+  },
+  "aboutText": {
+    "message": "TubeMind è gratuito. È finanziato da piccoli suggerimenti sponsorizzati, chiaramente indicati nell'estensione, e da donazioni volontarie – mai dalla vendita dei tuoi dati."
+  },
+  "welcomeTitle": {
+    "message": "Benvenuto in TubeMind 👋"
+  },
+  "welcomeText": {
+    "message": "Tre cose che rendono YouTube più utile:"
+  },
+  "welcomeStep1Title": {
+    "message": "Cerca nei video"
+  },
+  "welcomeStep1": {
+    "message": "Premi S durante un video. Ogni risultato appare come un marcatore giallo sulla barra di avanzamento."
+  },
+  "welcomeStep2Title": {
+    "message": "Note con timestamp"
+  },
+  "welcomeStep2": {
+    "message": "Premi N per una nota o B per un segnalibro veloce. Tutto finisce nella tua libreria."
+  },
+  "welcomeStep3Title": {
+    "message": "Riassunti nel pannello laterale"
+  },
+  "welcomeStep3": {
+    "message": "Clicca sull'icona TubeMind → Pannello laterale → Riassumi il video."
+  },
+  "welcomeCta": {
+    "message": "Vai su YouTube"
+  }
+}

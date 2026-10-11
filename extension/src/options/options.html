@@ -1,0 +1,74 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>TubeMind Settings</title>
+  <link rel="icon" href="../../icons/icon32.png">
+  <link rel="stylesheet" href="../ui/common.css">
+  <link rel="stylesheet" href="options.css">
+</head>
+<body>
+  <div class="opt-wrap">
+    <header class="opt-header">
+      <div class="brand"><img src="../../icons/icon48.png" alt=""> TubeMind <span class="muted opt-sub" data-i18n="optionsTitle"></span></div>
+      <button class="btn btn-sm" id="btn-library">📚 <span data-i18n="openLibrary"></span></button>
+    </header>
+
+    <section class="card welcome" id="welcome" hidden>
+      <h1 data-i18n="welcomeTitle"></h1>
+      <p class="muted" data-i18n="welcomeText"></p>
+      <ol class="welcome-steps">
+        <li><strong data-i18n="welcomeStep1Title"></strong><span data-i18n="welcomeStep1"></span></li>
+        <li><strong data-i18n="welcomeStep2Title"></strong><span data-i18n="welcomeStep2"></span></li>
+        <li><strong data-i18n="welcomeStep3Title"></strong><span data-i18n="welcomeStep3"></span></li>
+      </ol>
+      <a class="btn btn-primary" href="https://www.youtube.com/" target="_blank" rel="noopener" data-i18n="welcomeCta"></a>
+    </section>
+
+    <div id="sections"></div>
+
+    <section class="card opt-section">
+      <h2 data-i18n="shortcutsTitle"></h2>
+      <ul class="keys">
+        <li><kbd>S</kbd><span data-i18n="onboardingSearch"></span></li>
+        <li><kbd>N</kbd><span data-i18n="onboardingNote"></span></li>
+        <li><kbd>B</kbd><span data-i18n="onboardingBookmark"></span></li>
+        <li><kbd>D</kbd><span data-i18n="shortcutFaster"></span></li>
+        <li><kbd>A</kbd><span data-i18n="shortcutSlower"></span></li>
+        <li><kbd>R</kbd><span data-i18n="shortcutResetSpeed"></span></li>
+      </ul>
+    </section>
+
+    <section class="card opt-section">
+      <h2 data-i18n="dataTitle"></h2>
+      <p class="muted small" data-i18n="dataText"></p>
+      <div class="row wrap">
+        <button class="btn btn-sm" id="btn-export" data-i18n="dataExport"></button>
+        <label class="btn btn-sm" for="import-file" data-i18n="dataImport"></label>
+        <input type="file" id="import-file" accept="application/json,.json" hidden>
+        <button class="btn btn-sm btn-ghost btn-danger" id="btn-clear" data-i18n="dataClear"></button>
+      </div>
+    </section>
+
+    <section class="card opt-section">
+      <h2 data-i18n="aboutTitle"></h2>
+      <p class="muted small" id="about-version"></p>
+      <p class="small" data-i18n="aboutText"></p>
+      <div class="row wrap">
+        <a class="btn btn-sm btn-primary" id="link-donate" target="_blank" rel="noopener" hidden>❤️ <span data-i18n="supportProject"></span></a>
+        <a class="btn btn-sm" id="link-rate" target="_blank" rel="noopener">⭐ <span data-i18n="rateButton"></span></a>
+        <a class="btn btn-sm btn-ghost" id="link-privacy" target="_blank" rel="noopener" data-i18n="privacy" hidden></a>
+        <a class="btn btn-sm btn-ghost" id="link-website" target="_blank" rel="noopener" data-i18n="website" hidden></a>
+      </div>
+    </section>
+  </div>
+
+  <script src="../shared/config.js"></script>
+  <script src="../shared/utils.js"></script>
+  <script src="../shared/settings.js"></script>
+  <script src="../shared/store.js"></script>
+  <script src="../ui/page.js"></script>
+  <script src="options.js"></script>
+</body>
+</html>

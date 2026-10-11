@@ -1,0 +1,67 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>TubeMind – Feedback</title>
+  <meta name="robots" content="noindex">
+  <link rel="icon" href="assets/logo-256.png">
+  <link rel="stylesheet" href="assets/style.css">
+</head>
+<body>
+  <div class="wrap nav">
+    <a class="logo" href="./"><img src="assets/logo-256.png" alt=""> TubeMind</a>
+    <nav class="lang-switch"><a data-set-lang="en">en</a><a data-set-lang="de">de</a><a data-set-lang="fr">fr</a><a data-set-lang="it">it</a></nav>
+  </div>
+
+  <main class="page">
+    <div class="card">
+      <h1 data-t="uTitle">Sorry to see you go 👋</h1>
+      <p data-t="uText"></p>
+      <form id="feedback">
+        <div class="reasons">
+          <label><input type="checkbox" name="reason" value="not-working"> <span data-t="r1"></span></label>
+          <label><input type="checkbox" name="reason" value="slow"> <span data-t="r2"></span></label>
+          <label><input type="checkbox" name="reason" value="missing-feature"> <span data-t="r3"></span></label>
+          <label><input type="checkbox" name="reason" value="not-needed"> <span data-t="r4"></span></label>
+          <label><input type="checkbox" name="reason" value="other"> <span data-t="r5"></span></label>
+        </div>
+        <textarea id="message" data-placeholder="uPlaceholder"></textarea>
+        <div class="cta" style="justify-content:flex-start; margin-top:16px">
+          <button class="btn btn-primary" type="submit" id="send" data-t="uSend">Send feedback by e-mail</button>
+          <a class="btn" data-link="store" href="#" data-t="uReinstall"></a>
+        </div>
+      </form>
+    </div>
+
+    <div class="ad-slot" data-slot="uninstall"><div class="ad-label" data-t="adLabel">Advertisement</div></div>
+  </main>
+
+  <footer>
+    <div class="wrap">
+      <span>© TubeMind · <span data-t="footerNote"></span></span>
+      <span><a href="privacy.html" data-t="footerPrivacy">Privacy policy</a></span>
+    </div>
+  </footer>
+
+  <script src="assets/site-config.js"></script>
+  <script src="assets/texts.js"></script>
+  <script src="assets/site.js"></script>
+  <script>
+    (function () {
+      var cfg = window.SITE_CONFIG || {};
+      var msg = document.getElementById('message');
+      msg.placeholder = window.SITE.text('uPlaceholder');
+      if (!cfg.contactEmail) document.getElementById('send').hidden = true;
+      document.getElementById('feedback').addEventListener('submit', function (e) {
+        e.preventDefault();
+        var reasons = Array.prototype.map.call(document.querySelectorAll('input[name=reason]:checked'), function (i) { return i.value; });
+        var params = new URLSearchParams(location.search);
+        var body = 'Reasons: ' + (reasons.join(', ') || '-') + '\nVersion: ' + (params.get('v') || '?') + '\n\n' + msg.value;
+        location.href = 'mailto:' + cfg.contactEmail + '?subject=' + encodeURIComponent('TubeMind feedback') + '&body=' + encodeURIComponent(body);
+        document.getElementById('send').textContent = window.SITE.text('uThanks');
+      });
+    })();
+  </script>
+</body>
+</html>
