@@ -9,7 +9,7 @@ window.SITE_CONFIG = {
   storeUrl: '',
 
   // Spenden-Link (Ko-fi, Buy Me a Coffee, PayPal.me …)
-  donateUrl: '',
+  donateUrl: 'https://ko-fi.com/chickenlarry',
 
   // E-Mail für Feedback (Deinstallations-Seite) und Datenschutz-Anfragen
   contactEmail: '',

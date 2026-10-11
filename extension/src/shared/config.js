@@ -31,7 +31,7 @@
     sponsorFeedUrl: WEBSITE_URL + '/sponsor.json',
 
     // Spenden-Link (Ko-fi, Buy Me a Coffee, PayPal.me, GitHub Sponsors …)
-    donateUrl: 'https://ko-fi.com/YOUR-KOFI-NAME',
+    donateUrl: 'https://ko-fi.com/chickenlarry',
 
     // Wie oft die Sponsor-Liste neu geladen wird (in Stunden)
     sponsorRefreshHours: 6,
