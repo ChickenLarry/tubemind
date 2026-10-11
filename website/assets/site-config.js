@@ -15,7 +15,7 @@ window.SITE_CONFIG = {
   contactEmail: '',
 
   // Dein Name oder Firmenname (für die Datenschutzerklärung)
-  ownerName: '',
+  ownerName: 'Noel Schärer',
 
   // Google AdSense: deine Publisher-ID, z.B. "ca-pub-1234567890123456"
   adsenseClient: '',

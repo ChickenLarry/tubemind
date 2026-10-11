@@ -12,7 +12,7 @@
 
   // Deine Webseite (z.B. GitHub Pages oder eigene Domain), OHNE "/" am Ende.
   // Dort liegen welcome.html, uninstall.html, privacy.html und sponsor.json.
-  const WEBSITE_URL = 'https://YOUR-GITHUB-USERNAME.github.io/tubemind';
+  const WEBSITE_URL = 'https://chickenlarry.github.io/tubemind-website';
 
   TM.config = {
     name: 'TubeMind',
