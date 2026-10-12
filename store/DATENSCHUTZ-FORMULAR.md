@@ -33,7 +33,8 @@ Die Texte unten kannst du **auf Englisch** direkt einfügen (das Dashboard ist m
 TubeMind überträgt keine Daten an dich als Entwickler. Google fragt aber, welche Daten die Extension **verarbeitet**. Ehrlich und auf der sicheren Seite ist:
 
 - ☑ **Website content** – die Extension liest Untertitel/Transkripte von YouTube-Videos (nur lokal verarbeitet)
-- ☑ **User activity** – Schauzeit-Statistik (nur lokal gespeichert)
+- ☑ **User activity** – Tastenkürzel und Schauzeit-Statistik (nur lokal gespeichert)
+- ☑ **Web history** – Titel und Zeitpunkt gespeicherter Videos, Schauzeit pro Kanal (nur lokal)
 - Alles andere: **nicht** ankreuzen (keine Namen, E-Mails, Standort, Passwörter, Zahlungsdaten, Gesundheitsdaten, Kommunikation).
 
 Danach diese drei Bestätigungen ankreuzen:

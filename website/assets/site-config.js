@@ -12,7 +12,7 @@ window.SITE_CONFIG = {
   donateUrl: 'https://ko-fi.com/chickenlarry',
 
   // E-Mail für Feedback (Deinstallations-Seite) und Datenschutz-Anfragen
-  contactEmail: '',
+  contactEmail: 'noelschaerer.dev@gmail.com',
 
   // Dein Name oder Firmenname (für die Datenschutzerklärung)
   ownerName: 'Noel Schärer',
