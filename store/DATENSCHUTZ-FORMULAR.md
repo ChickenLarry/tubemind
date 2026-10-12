@@ -42,7 +42,7 @@ Danach diese drei Bestätigungen ankreuzen:
 - ☑ I do not use or transfer user data for purposes that are unrelated to my item's single purpose
 - ☑ I do not use or transfer user data to determine creditworthiness or for lending purposes
 
-**Privacy policy URL:** `https://DEIN-NAME.github.io/tubemind/privacy.html`
+**Privacy policy URL:** `https://chickenlarry.github.io/tubemind-website/privacy.html`
 
 ---
 
