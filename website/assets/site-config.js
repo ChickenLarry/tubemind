@@ -6,7 +6,7 @@
  */
 window.SITE_CONFIG = {
   // Link zu deiner Extension im Chrome Web Store (nach dem Veröffentlichen eintragen)
-  storeUrl: '',
+  storeUrl: 'https://chromewebstore.google.com/detail/tubemind-ki-zusammenfassu/eolnonfjcojjbobmknhhdnnlbdhbalan',
 
   // Spenden-Link (Ko-fi, Buy Me a Coffee, PayPal.me …)
   donateUrl: 'https://ko-fi.com/chickenlarry',
