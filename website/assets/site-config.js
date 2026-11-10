@@ -17,6 +17,14 @@ window.SITE_CONFIG = {
   // Dein Name oder Firmenname (für die Datenschutzerklärung)
   ownerName: 'Noel Schärer',
 
+  // Postadresse fürs Impressum (Pflicht nach UWG Art. 3 lit. s), z.B. 'Musterstrasse 1, 8000 Zürich, Schweiz'
+  // TODO Noel: eintragen. Solange leer, zeigt das Impressum einen Hinweis statt einer Adresse.
+  postalAddress: '',
+
+  // Erst auf true setzen, wenn in AdSense unter "Datenschutz & Mitteilungen" die Einwilligungs-Mitteilung
+  // (DSGVO, gilt für EWR, UK und Schweiz) veröffentlicht ist. Vorher lädt keine Werbung.
+  adsenseConsentReady: false,
+
   // Google AdSense: deine Publisher-ID, z.B. "ca-pub-1234567890123456"
   adsenseClient: '',
 

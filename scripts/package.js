@@ -1,7 +1,7 @@
 #!/usr/bin/env node
 /*
  * Builds dist/tubemind-<version>.zip for the Chrome Web Store (no dependencies).
- * Runs the locale check first, so a broken translation never gets uploaded.
+ * Runs all tests and the locale build first, so a broken extension or translation never gets uploaded.
  *
  *   node scripts/package.js
  */
@@ -14,6 +14,12 @@ const ROOT = path.join(__dirname, '..');
 const EXT = path.join(ROOT, 'extension');
 const DIST = path.join(ROOT, 'dist');
 
+try {
+  execFileSync(process.execPath, [path.join(__dirname, 'test.js')], { stdio: 'inherit' });
+} catch {
+  console.error('✗ Tests failed: no ZIP built. Fix the red tests first.');
+  process.exit(1);
+}
 execFileSync(process.execPath, [path.join(__dirname, 'build-locales.js')], { stdio: 'inherit' });
 
 const manifest = JSON.parse(fs.readFileSync(path.join(EXT, 'manifest.json'), 'utf8'));

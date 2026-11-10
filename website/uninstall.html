@@ -11,7 +11,7 @@
 <body>
   <div class="wrap nav">
     <a class="logo" href="./"><img src="assets/logo-256.png" alt=""> TubeMind</a>
-    <nav class="lang-switch"><a data-set-lang="en">en</a><a data-set-lang="de">de</a><a data-set-lang="fr">fr</a><a data-set-lang="it">it</a></nav>
+    <nav class="lang-switch"><a href="?lang=en" data-set-lang="en">en</a><a href="?lang=de" data-set-lang="de">de</a><a href="?lang=fr" data-set-lang="fr">fr</a><a href="?lang=it" data-set-lang="it">it</a></nav>
   </div>
 
   <main class="page">
@@ -26,7 +26,9 @@
           <label><input type="checkbox" name="reason" value="not-needed"> <span data-t="r4"></span></label>
           <label><input type="checkbox" name="reason" value="other"> <span data-t="r5"></span></label>
         </div>
+        <label for="message" data-t="uLabel">Your message (optional)</label>
         <textarea id="message" data-placeholder="uPlaceholder"></textarea>
+        <p class="form-note"><span data-t="uNote"></span> <a href="privacy.html" data-t="footerPrivacy">Privacy policy</a></p>
         <div class="cta" style="justify-content:flex-start; margin-top:16px">
           <button class="btn btn-primary" type="submit" id="send" data-t="uSend">Send feedback by e-mail</button>
           <a class="btn" data-link="store" href="#" data-t="uReinstall"></a>
@@ -40,7 +42,7 @@
   <footer>
     <div class="wrap">
       <span>© TubeMind · <span data-t="footerNote"></span></span>
-      <span><a href="privacy.html" data-t="footerPrivacy">Privacy policy</a></span>
+      <span><a href="privacy.html" data-t="footerPrivacy">Privacy policy</a> · <a href="legal.html" data-t="footerLegal">Legal notice &amp; terms</a></span>
     </div>
   </footer>
 

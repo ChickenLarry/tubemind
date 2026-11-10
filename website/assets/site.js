@@ -43,10 +43,13 @@
   setLink('[data-link="mail"]', cfg.contactEmail ? 'mailto:' + cfg.contactEmail : '');
   document.querySelectorAll('[data-owner]').forEach((el) => (el.textContent = cfg.ownerName || '—'));
   document.querySelectorAll('[data-email]').forEach((el) => (el.textContent = cfg.contactEmail || '—'));
+  document.querySelectorAll('[data-address]').forEach((el) => (el.textContent = cfg.postalAddress || el.textContent));
+
+  // AdSense needs Google's certified consent message (EEA, UK, CH) – without it no ad script loads at all.
 
   // AdSense (only if configured). Never place ads inside the extension itself – only on these web pages.
   const slots = document.querySelectorAll('.ad-slot[data-slot]');
-  if (cfg.adsenseClient && slots.length) {
+  if (cfg.adsenseClient && cfg.adsenseConsentReady && slots.length) {
     const s = document.createElement('script');
     s.async = true;
     s.src = 'https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=' + encodeURIComponent(cfg.adsenseClient);

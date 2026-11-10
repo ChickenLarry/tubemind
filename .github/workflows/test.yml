@@ -1,0 +1,15 @@
+# Runs all TubeMind tests on every push and pull request (no packages to install).
+# The --live YouTube test is left out on purpose: it needs the real network and would fail at random.
+name: test
+on: [push, pull_request]
+permissions:
+  contents: read
+jobs:
+  test:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-node@v4
+        with:
+          node-version: lts/*
+      - run: node scripts/test.js

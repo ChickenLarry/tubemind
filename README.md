@@ -118,7 +118,9 @@ Siehe **[docs/GELD-VERDIENEN.md](docs/GELD-VERDIENEN.md)**: Spenden, Sponsoren-K
 | `node scripts/test.js --live` | zusätzlich echter Transkript-Test mit YouTube |
 | `node scripts/build-locales.js` | Übersetzungen aus `scripts/translations.js` erzeugen + prüfen |
 | `node scripts/make-icons.js` | Icons neu zeichnen |
-| `node scripts/package.js` | ZIP für den Store bauen |
+| `node scripts/package.js` | ZIP für den Store bauen (läuft nur, wenn alle Tests grün sind) |
+
+Bei jedem Push auf GitHub laufen die Tests automatisch (`.github/workflows/test.yml`, ohne `--live`). Ein rotes Kreuz beim Commit auf GitHub heisst: ein Test ist kaputt.
 
 **Neues Feature hinzufügen:** neue Datei in `extension/src/content/modules/` mit `TM.registerModule({ id, start, stop, onVideo, onMeta, onSettings })`, in `manifest.json` eintragen, Standardwert in `shared/settings.js` und eine Zeile in `options/options.js`. Jedes Modul lässt sich in den Einstellungen einzeln abschalten.
 
